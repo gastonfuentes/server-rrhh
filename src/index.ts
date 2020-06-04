@@ -5,6 +5,7 @@ import cors from 'cors';
 
 //llamamos a las rutas del index
 import indexRoutes from "./routes/indexRoutes";
+import usuarioRoutes from "./routes/usuarioRoutes";
 
 
 class Server {
@@ -34,6 +35,7 @@ class Server {
 
     routes(): void{
         this.app.use('/',indexRoutes);
+        this.app.use('/api/usuario',usuarioRoutes);
     }
 
     start(): void{
